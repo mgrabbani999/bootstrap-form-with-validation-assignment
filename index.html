@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap Form Assignment 01</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body class="bdy">
+    <form action="" class="container border border-3 border-white rounded mt-4 needs-validation" novalidate>
+        <h1 class="text-white">
+            Register Today
+        </h1>
+        <h5 class="mb-3 text-white">
+            Fill in the data below
+        </h5>
+        <div class="mb-4 name">
+            <input type="text" class="form-control" placeholder="Full name" required>
+            <div class="valid-feedback">
+             Your name is correct!
+            </div>
+            <div class="invalid-feedback">
+                Username field cannot be blank!
+               </div>
+        </div>
+        <div class="name">
+            <input type="email" class="form-control" placeholder="E-mail Address" required>
+            <div class="invalid-feedback">
+                Email field cannot be blank!
+               </div>
+        </div>
+        <div class="mt-4 name">
+            <input type="text" class="form-control" placeholder="Position" required>
+            <div class="invalid-feedback">
+                Please select a position!
+               </div>
+        </div>
+        <div class="mt-4 name">
+            <input type="password" class="form-control" placeholder="Password" required>
+            <div class="invalid-feedback">
+                Password field cannot be blank!
+               </div>
+        </div>
+        <div class="mt-4">
+             <div>
+                    <label for="" class="text-white">Gender:</label>
+                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary text-light" for="option1">Male</label>
+                    
+                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary text-light" for="option2">Female</label>
+                    
+                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" required>
+                    <label class="btn btn-outline-secondary text-light" for="option3">Secret</label>
+                    <div class="valid-feedback">
+                        You select a gender!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please select your gerder!
+                    </div>
+                </div>
+                </div>
+        <div class="mb-2 text-white">
+            <input type="checkbox" required>
+            <label for="">I confirm that all data are correct</label>
+            <div class="invalid-feedback">
+                Please confirm that the entered data are all correct!
+               </div>
+        </div>
+        <div class="mb-2">
+            <button type="radio" class="btn btn-secondary">Register</button>
+        </div>
+    </form>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
